@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Product from "./components/Product";
+import Data from "./Data";
+import "./App.css";
+import Announcement from "./components/Announcement";
+import Featured from "./components/Featured";
+// import ProductScreen from "./components/ProductScreen";
+// import React, { useEffect, useState } from "react";
+// import { commerce } from "./lib/commerce";
+// import ProductsCommerce from "./products/ProductsCommerce";
 
-function App() {
+const App = () => {
+  // const [products, setProducts] = useState([]);
+  // ***********************************************************
+  // CommerceJS is handling backend
+
+  // async function fetchProducts() {
+  //   const { data } = await commerce.products.list();
+  //   setProducts(data);
+  // }
+  // // Fetching propduct list with useEffect hook.  This will only run once [] on load.
+  // useEffect(() => {
+  //   fetchProducts();
+  // }, []);
+
+  // ***********************************************************
+  // let mappedProducts = products.map((items) => (
+  //   <ProductsCommerce {...items} key={items.id} />
+  // ));
+
+  let mappedData = Data.products.map((items) => (
+    <Product key={Math.random(10) * 10} {...items} />
+  ));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Announcement />
+      <Header />
+      <Featured />
+      <div className="app">{mappedData}</div>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

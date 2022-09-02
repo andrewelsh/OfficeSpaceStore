@@ -1,0 +1,12 @@
+/* Navigation Bar */
+#header {
+  margin-bottom: 15px;
+  justify-content: space-between;
+  padding-inline: 15px;
+}
+.navbar-brand {
+  font-size: calc(15px + 1vw) !important;
+  padding: 10px;
+  letter-spacing: 2px;
+  color: white !important;
+}
