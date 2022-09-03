@@ -10,10 +10,15 @@ export default function App() {
     >
       <MDBContainer id="centerText" className="p-4">
         <div id="footerText"> SIGN UP FOR OUR CUSTOMER DEALS</div>
-        <input
-          className="footerInput"
-          placeholder="rockinglife@everymoment.com"
-        />
+        <div className="footerInputBtn">
+          <input
+            className="footerInput"
+            placeholder="rockinglife@everymoment.com"
+          />
+          <button type="button" class="btn btn-primary">
+            JOIN US
+          </button>
+        </div>
       </MDBContainer>
       <div
         className="text-center p-3"

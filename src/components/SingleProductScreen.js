@@ -89,8 +89,10 @@ const SingleProductScreen = () => {
             {description}
             {description}
             {description}
-            <hr />
-            <hr />
+          </p>
+          <hr />
+          <hr />
+          <div>
             <span id="star"> ⭐⭐⭐⭐⭐ ({rating}) / 5 </span>
             <br />
             <div className="btnStarContainer">
@@ -108,7 +110,7 @@ const SingleProductScreen = () => {
                   <button
                     id="productScreenBtn"
                     type="button"
-                    class="btn btn-success"
+                    class="btn btn-primary"
                     onClick={handleAddToCart}
                   >
                     <span id="plus"></span> ADD TO CART
@@ -125,7 +127,7 @@ const SingleProductScreen = () => {
                 </div>
               </div>
             </div>
-          </p>
+          </div>
         </div>
       </div>
 
