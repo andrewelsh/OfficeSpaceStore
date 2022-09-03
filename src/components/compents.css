@@ -198,7 +198,7 @@ body {
 #brand {
   color: rgb(114, 114, 114);
   font-size: 16px;
-  margin-inline: 20px;
+  margin-inline: 10px;
 }
 #productScreenBtn {
   margin-top: 15px;
@@ -248,7 +248,7 @@ img {
 
 .productScreenText {
   font-size: 30px;
-  margin-inline: 20px;
+  margin-inline: 10px;
   text-decoration: underline;
   text-decoration-color: steelblue;
   text-underline-offset: 8px;

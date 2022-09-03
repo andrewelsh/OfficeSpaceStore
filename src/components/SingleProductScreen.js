@@ -53,35 +53,37 @@ const SingleProductScreen = () => {
             <div className="productScreenSmallImages">
               {images[1] && (
                 <img
-                  onClick={() => handleFeatureImageClick(images[1])}
+                  onClick={() => handleFeatureImageClick(images[0])}
                   className="productScreenSmallImagesNested"
-                  src={images[1]}
+                  src={images[0]}
                   alt={title}
                 />
               )}
 
               {images[2] && (
                 <img
-                  onClick={() => handleFeatureImageClick(images[2])}
+                  onClick={() => handleFeatureImageClick(images[1])}
                   className="productScreenSmallImagesNested"
-                  src={images[0]}
+                  src={images[1]}
                   alt={title}
                 />
               )}
               {images[3] && (
                 <img
-                  onClick={() => handleFeatureImageClick(images[3])}
+                  onClick={() => handleFeatureImageClick(images[2])}
                   className="productScreenSmallImagesNested"
-                  src={images[3]}
+                  src={images[2]}
                   alt={title}
                 />
               )}
             </div>
           </div>
         </div>
+        <hr />
         <div>
           <h2 className="productScreenText">{title}</h2>
           <p id="brand">Brand : {brand}</p>
+
           <p className="productScreenSmallText">
             {description}
             {description}
