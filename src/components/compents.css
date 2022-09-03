@@ -156,10 +156,8 @@ a {
 /* Single Product Styling */
 
 .btnStarContainer {
-  text-align-last: left;
-  /* width: 600px; */
-  margin: auto;
-  /* border: red 2px solid; */
+  display: flow-root;
+  text-align: -webkit-right;
 }
 
 .productScreen {
@@ -173,7 +171,7 @@ a {
 
 #price {
   font-size: 25px;
-  margin-right: 60px;
+  margin-inline: 10px;
 }
 #brand {
   color: rgb(114, 114, 114);
@@ -181,14 +179,11 @@ a {
   margin-inline: 20px;
 }
 #productScreenBtn {
-  /* margin-inline-start: 15px; */
+  margin-inline: 5px;
 }
 
 .productScreenbuttons {
-  margin: 50px 0px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  /* display: flex; */
 }
 /* Main image on screen */
 .productScreenSmallImagesNested {
@@ -242,6 +237,14 @@ img {
   display: flex;
   justify-content: center;
 }
+#flex-right {
+  display: flex;
+  justify-content: right;
+}
+#flex-left {
+  display: flex;
+  justify-content: left;
+}
 #shoppingCart {
   font-size: 30px;
   color: steelblue;
@@ -272,7 +275,7 @@ img {
   font-size: 24px;
   text-decoration: line-through;
   text-decoration-color: #aa002bb8;
-  transform: translate(1px, -15px);
+  transform: translate(85px, -25px);
   text-underline-offset: unset;
   color: black;
 }
