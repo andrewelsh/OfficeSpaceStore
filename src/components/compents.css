@@ -327,6 +327,11 @@ img {
 /* ******************** */
 
 /* Footer */
+
+footer {
+  margin-top: 100px;
+}
+
 .footerInputBtn {
   justify-content: center;
   margin-inline: 10px;
