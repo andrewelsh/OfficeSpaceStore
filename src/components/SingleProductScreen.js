@@ -8,7 +8,7 @@ import "./compents.css";
 // This is the indivdual product screen / Single product layout / Page
 const SingleProductScreen = () => {
   const { id } = useParams();
-
+  window.scrollTo(0, 0);
   const singleProduct = Data.products.find(
     (items) => items.id === parseInt(id)
   );
