@@ -93,26 +93,28 @@ const SingleProductScreen = () => {
                   </dicount>
                 )}
                 <strong>
-                  <span id="price"> $ {price}</span>
+                  <span id="price"> ${price}</span>
                 </strong>
-                <button
-                  id="productScreenBtn"
-                  type="button"
-                  class="btn btn-success"
-                  onClick={handleAddToCart}
-                >
-                  <span id="plus"></span> ADD TO CART
-                </button>
-
-                <Link to="/">
+                <div id="flex-right" className="flex">
                   <button
                     id="productScreenBtn"
                     type="button"
-                    class="btn btn-dark"
+                    class="btn btn-success"
+                    onClick={handleAddToCart}
                   >
-                    CANCEL
+                    <span id="plus"></span> ADD TO CART
                   </button>
-                </Link>
+
+                  <Link to="/">
+                    <button
+                      id="productScreenBtn"
+                      type="button"
+                      class="btn btn-dark"
+                    >
+                      CANCEL
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </p>
