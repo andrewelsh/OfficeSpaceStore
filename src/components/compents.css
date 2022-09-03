@@ -129,6 +129,14 @@ select {
   border-image-outset: 1px;
   border-radius: 8px;
   box-shadow: 0px 0px 3px 0px rgb(11, 18, 23);
+  transition: 0.1s;
+  background-color: rgb(240, 240, 240);
+}
+
+.productCard:hover {
+  transform: translateY(-2px);
+  background-color: white;
+  font-weight: 300;
 }
 a {
   text-decoration: none !important;
@@ -169,7 +177,10 @@ a {
   text-align: -webkit-right;
 }
 .productScreenBG {
-  background: linear-gradient(#e66465, #9198e5);
+  background: linear-gradient(#ffffff, #e3e3e3);
+}
+body {
+  background: linear-gradient(#ffffff, #e5e5e5);
 }
 .productScreen {
   /* Both of these caused the mobile screen to go over */

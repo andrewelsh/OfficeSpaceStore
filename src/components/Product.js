@@ -41,7 +41,7 @@ const Product = (props) => {
         </a>
       </p>
       <p id="productRating">
-        ({props.rating}/5) <span id="star"> ⭐ </span>
+        <span id="MainPageStar">({props.rating}/5) ⭐ </span>
       </p>
       <p id="productPrice">${props.price}</p>
     </div>
