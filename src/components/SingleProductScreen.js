@@ -84,8 +84,9 @@ const SingleProductScreen = () => {
             <hr />
             <hr />
             <div className="btnStarContainer">
-              <span id="star"> ⭐⭐⭐⭐⭐ </span>({rating}) / 5
+              <span id="star"> ⭐⭐⭐⭐⭐ ({rating}) / 5</span>
               <div className="productScreenbuttons">
+                <dicount id="discountSavings">- {discountPercentage} %</dicount>
                 {discount && (
                   <dicount className="discount">
                     {" "}
