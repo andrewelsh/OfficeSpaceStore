@@ -8,13 +8,6 @@ export default function App() {
       className="text-center text-white"
       style={{ backgroundColor: "rgba(33,37,41)" }}
     >
-      <div
-        id="footerLogo"
-        className="navbar navbar-dark bg-dark navbar-expand-lg"
-      >
-        {" "}
-        OFFICE SPACE
-      </div>
       <MDBContainer id="centerText" className="p-4">
         <div id="footerText"> SIGN UP FOR OUR CUSTOMER DEALS</div>
         <input className="footerInput" placeholder="rockinglife@everyday.com" />

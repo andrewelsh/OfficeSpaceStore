@@ -41,7 +41,13 @@ const SingleProductScreen = () => {
 
       <div className="productScreen">
         <div className="productScreenImage">
-          <img className="singleProductImage" src={featuredImage} alt={title} />
+          <a href={images[0]}>
+            <img
+              className="singleProductImage"
+              src={featuredImage}
+              alt={title}
+            />
+          </a>
 
           <div className="productScreenImageBottom">
             <div className="productScreenSmallImages">

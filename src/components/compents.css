@@ -243,6 +243,7 @@ img {
   width: 400px;
   float: left;
   margin: 10px 50px 10px 10px;
+  cursor: zoom-in;
 }
 
 .productScreenText {
