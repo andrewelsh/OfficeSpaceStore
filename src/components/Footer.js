@@ -10,7 +10,10 @@ export default function App() {
     >
       <MDBContainer id="centerText" className="p-4">
         <div id="footerText"> SIGN UP FOR OUR CUSTOMER DEALS</div>
-        <input className="footerInput" placeholder="rockinglife@everyday.com" />
+        <input
+          className="footerInput"
+          placeholder="rockinglife@everymoment.com"
+        />
       </MDBContainer>
       <div
         className="text-center p-3"
