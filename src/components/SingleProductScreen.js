@@ -83,10 +83,10 @@ const SingleProductScreen = () => {
             {description}
             <hr />
             <hr />
+            <span id="star"> ⭐⭐⭐⭐⭐ ({rating}) / 5 </span>
+            <br />
             <div className="btnStarContainer">
-              <span id="star"> ⭐⭐⭐⭐⭐ ({rating}) / 5</span>
               <div className="productScreenbuttons">
-                <dicount id="discountSavings">- {discountPercentage} %</dicount>
                 {discount && (
                   <dicount className="discount">
                     {" "}
@@ -96,7 +96,7 @@ const SingleProductScreen = () => {
                 <strong>
                   <span id="price"> ${price}</span>
                 </strong>
-                <div id="flex-right" className="flex">
+                <div className="flex">
                   <button
                     id="productScreenBtn"
                     type="button"
@@ -105,7 +105,6 @@ const SingleProductScreen = () => {
                   >
                     <span id="plus"></span> ADD TO CART
                   </button>
-
                   <Link to="/">
                     <button
                       id="productScreenBtn"

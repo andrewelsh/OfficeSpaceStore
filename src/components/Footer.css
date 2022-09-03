@@ -1,0 +1,6 @@
+#footerLogo {
+  font-size: calc(15px + 1vw) !important;
+  padding: 10px;
+  letter-spacing: 2px;
+  color: white !important;
+}
