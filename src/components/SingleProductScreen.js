@@ -6,7 +6,7 @@ import Data from "../Data";
 import "./compents.css";
 
 // This is the indivdual product screen / Single product layout / Page
-const SingleProductScreen = () => {
+const SingleProductScreen = (props) => {
   const { id } = useParams();
   window.scrollTo(0, 0);
   const singleProduct = Data.products.find(
@@ -24,11 +24,6 @@ const SingleProductScreen = () => {
     discountPercentage,
   } = singleProduct;
   const [featuredImage, SetfeaturedImage] = React.useState(images[0]);
-  const [cart, setCart] = React.useState(0);
-
-  function handleAddToCart() {
-    setCart((prev) => (prev = prev + 1));
-  }
 
   function handleFeatureImageClick(image) {
     SetfeaturedImage(image);
@@ -37,7 +32,7 @@ const SingleProductScreen = () => {
   let b = price;
   return (
     <div className="productScreenBG">
-      <Header props={() => handleAddToCart()} state={cart} />
+      <Header cartCount={props.cartCount} />
 
       <div className="productScreen">
         <div className="productScreenImage">
@@ -110,8 +105,7 @@ const SingleProductScreen = () => {
                   <button
                     id="productScreenBtn"
                     type="button"
-                    class="btn btn-primary"
-                    onClick={handleAddToCart}
+                    className="btn btn-primary"
                   >
                     <span id="plus"></span> ADD TO CART
                   </button>
@@ -119,7 +113,7 @@ const SingleProductScreen = () => {
                     <button
                       id="productScreenBtn"
                       type="button"
-                      class="btn btn-dark"
+                      className="btn btn-dark"
                     >
                       CANCEL
                     </button>

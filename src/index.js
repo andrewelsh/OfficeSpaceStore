@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import SingleProductScreen from "./components/SingleProductScreen";
+import Cart from "./components/shoppingCart/Cart";
+import Error from "./components/Error";
 
 // Fetching Data from URL
 
@@ -16,7 +18,9 @@ root.render(
     <React.StrictMode>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/*" element={<App />} />
+        <Route path="/checkout/*" element={<Cart />} />
+
+        <Route path="*" element={<Error />} />
         <Route
           path="/SingleProductScreen/:id"
           element={<SingleProductScreen />}

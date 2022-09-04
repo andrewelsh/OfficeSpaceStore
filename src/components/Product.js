@@ -22,6 +22,7 @@ const Product = (props) => {
       <Link
         to={{
           pathname: `/SingleProductScreen/${props.id}`,
+          state: props.cartCount,
         }}
       >
         {banner && (

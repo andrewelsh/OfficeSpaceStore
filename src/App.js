@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
@@ -11,7 +12,8 @@ import Featured from "./components/Featured";
 // import ProductsCommerce from "./products/ProductsCommerce";
 
 const App = () => {
-  // const [products, setProducts] = useState([]);
+  const [cartCount, setCartCount] = useState(5);
+
   // ***********************************************************
   // CommerceJS is handling backend
 
@@ -30,13 +32,13 @@ const App = () => {
   // ));
 
   let mappedData = Data.products.map((items) => (
-    <Product key={Math.random(10) * 10} {...items} />
+    <Product key={Math.random(10) * 10} {...items} cartCount={cartCount} />
   ));
 
   return (
     <div>
       <Announcement />
-      <Header />
+      <Header cartCount={cartCount} />
       <Featured />
       <div className="app">{mappedData}</div>
       <Footer />

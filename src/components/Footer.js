@@ -15,7 +15,7 @@ export default function App() {
             className="footerInput"
             placeholder="rockinglife@everymoment.com"
           />
-          <button type="button" class="btn btn-primary">
+          <button type="button" className="btn btn-primary">
             JOIN US
           </button>
         </div>
