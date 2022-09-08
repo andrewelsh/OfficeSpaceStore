@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./compents.css";
 
 // Main card layout -  This is the format used on the main app homescreen
 const Product = (props) => {
   // This sets localStorage to 0 for a first time user
+
+  function loadLocalStorage() {
+    Number.isInteger(parseInt(localStorage.state))
+      ? console.log("LocalStorage Loaded")
+      : localStorage.setItem("state", 0);
+  }
+  useEffect(() => {
+    loadLocalStorage();
+  }, []);
 
   // scroll to the top of the page
   window.scrollTo(0, 0);

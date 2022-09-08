@@ -10,7 +10,9 @@ function Header({ count }) {
         OFFICE SPACE
       </Link>
       <span id="shoppingCart">
-        <span id="shoppingCartState">{parseInt(count)}</span>
+        <span id="shoppingCartState">
+          {Number.isInteger(parseInt(count)) ? parseInt(count) : 0}
+        </span>
 
         <Link to="/checkout">🛒</Link>
       </span>

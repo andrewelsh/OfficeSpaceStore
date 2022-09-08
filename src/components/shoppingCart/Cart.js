@@ -27,6 +27,7 @@ const Cart = () => {
   // This will load localStorage with current count.
   useEffect(() => {
     localStorage.setItem("state", count);
+    console.log("Shopping Cart Count is :" + localStorage.state);
   }, [count]);
 
   return (
