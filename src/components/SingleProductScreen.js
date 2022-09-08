@@ -28,6 +28,13 @@ const SingleProductScreen = () => {
   } = singleProduct;
   const [featuredImage, SetfeaturedImage] = React.useState(images[0]);
 
+  let cartItems = [id];
+
+  function handleAddtoCart() {
+    localStorage.setItem("CartItems", cartItems);
+    console.log(localStorage);
+  }
+
   function handleFeatureImageClick(image) {
     SetfeaturedImage(image);
   }
@@ -109,6 +116,7 @@ const SingleProductScreen = () => {
                     id="productScreenBtn"
                     type="button"
                     className="btn btn-primary"
+                    onClick={handleAddtoCart}
                   >
                     <span id="plus"></span> ADD TO CART
                   </button>

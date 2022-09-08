@@ -11,7 +11,7 @@ function Header({ count }) {
       </Link>
       <span id="shoppingCart">
         <span id="shoppingCartState">{parseInt(count)}</span>
-        {console.log("This is from my Header state :" + count)}
+
         <Link to="/checkout">🛒</Link>
       </span>
     </Nav>
