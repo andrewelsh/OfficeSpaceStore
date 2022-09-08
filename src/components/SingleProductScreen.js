@@ -6,9 +6,12 @@ import Data from "../Data";
 import "./compents.css";
 
 // This is the indivdual product screen / Single product layout / Page
-const SingleProductScreen = (props) => {
+const SingleProductScreen = () => {
   const { id } = useParams();
+
+  // scroll to the top of the page
   window.scrollTo(0, 0);
+
   const singleProduct = Data.products.find(
     (items) => items.id === parseInt(id)
   );
@@ -32,7 +35,7 @@ const SingleProductScreen = (props) => {
   let b = price;
   return (
     <div className="productScreenBG">
-      <Header cartCount={props.cartCount} />
+      <Header count={localStorage.state} />
 
       <div className="productScreen">
         <div className="productScreenImage">
@@ -109,7 +112,7 @@ const SingleProductScreen = (props) => {
                   >
                     <span id="plus"></span> ADD TO CART
                   </button>
-                  <Link to="/">
+                  <Link to="/" state={localStorage.state}>
                     <button
                       id="productScreenBtn"
                       type="button"

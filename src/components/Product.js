@@ -5,6 +5,9 @@ import "./compents.css";
 // Main card layout -  This is the format used on the main app homescreen
 
 const Product = (props) => {
+  // scroll to the top of the page
+  window.scrollTo(0, 0);
+
   // conditional render of sold out banner
   let banner =
     props.stock === 0
@@ -22,7 +25,6 @@ const Product = (props) => {
       <Link
         to={{
           pathname: `/SingleProductScreen/${props.id}`,
-          state: props.cartCount,
         }}
       >
         {banner && (

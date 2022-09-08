@@ -1,0 +1,20 @@
+.shoppingCartImage {
+  width: 280px;
+  float: left;
+}
+
+.shoppingCart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#subText {
+  color: rgb(159, 159, 159);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#cartCountBtn {
+  margin: 3px;
+}

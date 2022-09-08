@@ -6,14 +6,14 @@ import Data from "./Data";
 import "./App.css";
 import Announcement from "./components/Announcement";
 import Featured from "./components/Featured";
+import { useLocation } from "react-router-dom";
 // import ProductScreen from "./components/ProductScreen";
 // import React, { useEffect, useState } from "react";
 // import { commerce } from "./lib/commerce";
 // import ProductsCommerce from "./products/ProductsCommerce";
 
-const App = () => {
-  const [cartCount, setCartCount] = useState(5);
-
+const App = (props) => {
+  const location = useLocation();
   // ***********************************************************
   // CommerceJS is handling backend
 
@@ -32,13 +32,13 @@ const App = () => {
   // ));
 
   let mappedData = Data.products.map((items) => (
-    <Product key={Math.random(10) * 10} {...items} cartCount={cartCount} />
+    <Product key={Math.random(10) * 10} {...items} />
   ));
 
   return (
     <div>
       <Announcement />
-      <Header cartCount={cartCount} />
+      <Header count={location.state} />
       <Featured />
       <div className="app">{mappedData}</div>
       <Footer />

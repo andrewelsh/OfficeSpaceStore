@@ -1,17 +1,18 @@
 import "./Header.css";
-import React from "react";
+import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 
-function Header(props) {
+function Header({ count }) {
   return (
     <Nav id="header" className="navbar navbar-dark bg-dark navbar-expand-lg">
-      <Link to="/" className="navbar-brand">
+      <Link to="/" className="navbar-brand" state={count}>
         OFFICE SPACE
       </Link>
-      <span id="shoppingCart" onClick={props.handleAddToCart}>
-        <span id="shoppingCartState">{props.cartCount}</span>
-        🛒
+      <span id="shoppingCart">
+        <span id="shoppingCartState">{parseInt(count)}</span>
+        {console.log("This is from my Header state :" + count)}
+        <Link to="/checkout">🛒</Link>
       </span>
     </Nav>
   );
