@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
@@ -6,14 +6,13 @@ import Data from "./Data";
 import "./App.css";
 import Announcement from "./components/Announcement";
 import Featured from "./components/Featured";
-import { useLocation } from "react-router-dom";
+
 // import ProductScreen from "./components/ProductScreen";
 // import React, { useEffect, useState } from "react";
 // import { commerce } from "./lib/commerce";
 // import ProductsCommerce from "./products/ProductsCommerce";
 
-const App = (props) => {
-  const location = useLocation();
+const App = () => {
   // ***********************************************************
   // CommerceJS is handling backend
 
