@@ -38,7 +38,7 @@ const App = (props) => {
   return (
     <div>
       <Announcement />
-      <Header count={location.state} />
+      <Header count={localStorage.length} />
       <Featured />
       <div className="app">{mappedData}</div>
       <Footer />

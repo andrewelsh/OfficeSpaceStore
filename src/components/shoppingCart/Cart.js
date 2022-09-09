@@ -7,7 +7,12 @@ import Footer from "../Footer";
 const Cart = () => {
   const location = useLocation();
   // Need to set localStorage as the state for the value to be recalled on refresh / reload.
-  const [count, setCount] = useState(localStorage.state);
+  const [count, setCount] = useState(parseInt(localStorage.length) - 1);
+
+  function handleClearCart() {
+    alert("Your Shopping Cart Has Been Cleared Of All Items");
+    localStorage.clear();
+  }
 
   function handleCartCount() {
     setCount(location.state > 0 ? location.state : 0);
@@ -27,12 +32,12 @@ const Cart = () => {
   // This will load localStorage with current count.
   useEffect(() => {
     localStorage.setItem("state", count);
-    console.log("Shopping Cart Count is :" + localStorage.state);
+    console.log("localStorage.length (items in cart) is: " + count);
   }, [count]);
 
   return (
     <div>
-      <Header count={count} />
+      <Header count={localStorage.length - 1} />
       <div className="shoppingCart">
         <img
           className="shoppingCartImage"
@@ -40,7 +45,9 @@ const Cart = () => {
           alt="some random pic"
         />
         <div>
-          <h4>{count > 0 ? "(" + count + " x) Key Board" : "Key Board"}</h4>
+          <h4>
+            {count > 0 ? "(" + count + " x) Items In Cart" : "No Items In Cart"}
+          </h4>
           <button
             onClick={add}
             type="button"
@@ -87,6 +94,14 @@ const Cart = () => {
             <Link to="/" state={count}>
               <button id="cartCountBtn" type="button" className="btn btn-dark">
                 Cancel
+              </button>
+              <button
+                id="cartCountBtn"
+                type="button"
+                className="btn btn-danger"
+                onClick={handleClearCart}
+              >
+                Clear Your Cart
               </button>
             </Link>
             <p id="subText">

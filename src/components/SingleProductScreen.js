@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -10,7 +10,7 @@ const SingleProductScreen = () => {
   const { id } = useParams();
 
   // scroll to the top of the page
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 
   const singleProduct = Data.products.find(
     (items) => items.id === parseInt(id)
@@ -28,10 +28,15 @@ const SingleProductScreen = () => {
   } = singleProduct;
   const [featuredImage, SetfeaturedImage] = React.useState(images[0]);
 
-  let cartItems = [id];
-
+  const [cartArry, setCartArry] = useState([]);
   function handleAddtoCart() {
-    localStorage.setItem("CartItems", cartItems);
+    setCartArry((prev) => [...prev, id]);
+    localStorage.setItem("Cart Item" + id, id);
+
+    console.log(
+      "Cart count from singleProductScreen " + parseInt(localStorage.length - 1)
+    );
+
     console.log(localStorage);
   }
 
@@ -42,7 +47,7 @@ const SingleProductScreen = () => {
   let b = price;
   return (
     <div className="productScreenBG">
-      <Header count={localStorage.state} />
+      <Header count={localStorage.length - 1} />
 
       <div className="productScreen">
         <div className="productScreenImage">
@@ -120,7 +125,14 @@ const SingleProductScreen = () => {
                   >
                     <span id="plus"></span> ADD TO CART
                   </button>
-                  <Link to="/" state={localStorage.state}>
+                  <button
+                    id="productScreenBtn"
+                    type="button"
+                    className="btn btn-primary"
+                  >
+                    <span id="plus"></span> BUY NOW
+                  </button>
+                  <Link to="/" state={localStorage.length - 1}>
                     <button
                       id="productScreenBtn"
                       type="button"

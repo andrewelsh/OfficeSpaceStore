@@ -8,7 +8,7 @@ const Product = (props) => {
 
   function loadLocalStorage() {
     Number.isInteger(parseInt(localStorage.state))
-      ? console.log("LocalStorage Loaded")
+      ? console.log()
       : localStorage.setItem("state", 0);
   }
   useEffect(() => {
