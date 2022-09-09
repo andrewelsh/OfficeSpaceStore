@@ -1,11 +1,5 @@
 import React from "react";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Product from "./components/Product";
-import Data from "./Data";
-import "./App.css";
-import Announcement from "./components/Announcement";
-import Featured from "./components/Featured";
 
 // import ProductScreen from "./components/ProductScreen";
 // import React, { useEffect, useState } from "react";
@@ -30,17 +24,9 @@ const App = () => {
   //   <ProductsCommerce {...items} key={items.id} />
   // ));
 
-  let mappedData = Data.products.map((items) => (
-    <Product key={Math.random(10) * 10} {...items} />
-  ));
-
   return (
     <div>
-      <Announcement />
       <Header count={localStorage.length} />
-      <Featured />
-      <div className="app">{mappedData}</div>
-      <Footer />
     </div>
   );
 };
