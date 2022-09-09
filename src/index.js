@@ -20,7 +20,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/checkout/*" element={<Cart />} />
 
-        <Route path="*" element={<Error />} />
+        <Route path="/*" element={<Error />} />
         <Route
           path="/SingleProductScreen/:id"
           element={<SingleProductScreen />}
