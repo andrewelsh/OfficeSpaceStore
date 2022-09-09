@@ -1,7 +1,7 @@
 # Office Space (e-commerce site)
 
-1. This project uses a static data set (could be a DB or API in the future), and render the content on a main page.
-2. There is some conditional rendering on stock quantity(sold out and low stock).
+1. This project uses a static data set (could be a DB or API in the future), and renders the content on a main page.
+2. There is some conditional rendering on stock quantity on the main page(sold out and low stock).
 3. state is managed though hooks, Links and localStorage ... just making things work for now.
 4. Shopping Cart is currently using localStorage to maintain state. This should be changed to a DB in another iteration. This screen still needs some work to get items to render.
 
@@ -11,7 +11,7 @@
 
 #### ReactJS / JS / JSX
 
-Used; hooks, hardcoded data (a database could be used in the future), search/find algorithms to match like pairs (required as props could not be used across Link)
+Used; hooks, hardcoded data (a database could be used in the future), search/find algorithms to match like pairs(This allowed the correct item to be displayed on once selected), and passed state through localstorage and Link states to track add to cart selections.
 
 #### HTML / CSS
 
