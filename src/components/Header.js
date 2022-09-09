@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 
 function Header({ count }) {
-  console.log("This is the cart count from Header: " + localStorage.length - 1);
+  // console.log("This is the cart count from Header: " + localStorage.length - 1);
   return (
     <Nav id="header" className="navbar navbar-dark bg-dark navbar-expand-lg">
       <Link to="/" className="navbar-brand" state={localStorage.length - 1}>

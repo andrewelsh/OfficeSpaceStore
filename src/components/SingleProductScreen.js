@@ -33,9 +33,9 @@ const SingleProductScreen = () => {
     setCartArry((prev) => [...prev, id]);
     localStorage.setItem("Cart Item" + id, id);
 
-    console.log(
-      "Cart count from singleProductScreen " + parseInt(localStorage.length - 1)
-    );
+    // console.log(
+    //   "Cart count from singleProductScreen " + parseInt(localStorage.length - 1)
+    // );
 
     console.log(localStorage);
   }
