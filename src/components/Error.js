@@ -11,7 +11,7 @@ let img = (
 const Error = () => {
   React.useEffect(() => {
     setInterval(() => {
-      window.location.replace("http://localhost:3000/");
+      window.location.replace("https://andrewelsh.github.io/OfficeSpace2/");
     }, 2000);
   }, []);
   return (
