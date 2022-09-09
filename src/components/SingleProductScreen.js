@@ -10,7 +10,7 @@ const SingleProductScreen = () => {
   const { id } = useParams();
 
   // scroll to the top of the page
-  // window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 
   const singleProduct = Data.products.find(
     (items) => items.id === parseInt(id)
@@ -32,6 +32,7 @@ const SingleProductScreen = () => {
   function handleAddtoCart() {
     setCartArry((prev) => [...prev, id]);
     localStorage.setItem("Cart Item" + id, id);
+    window.scrollTo(0, 0);
 
     // console.log(
     //   "Cart count from singleProductScreen " + parseInt(localStorage.length - 1)
