@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
@@ -6,13 +6,14 @@ import Data from "./Data";
 import "./App.css";
 import Announcement from "./components/Announcement";
 import Featured from "./components/Featured";
-
+import { useLocation } from "react-router-dom";
 // import ProductScreen from "./components/ProductScreen";
 // import React, { useEffect, useState } from "react";
 // import { commerce } from "./lib/commerce";
 // import ProductsCommerce from "./products/ProductsCommerce";
 
-const App = () => {
+const App = (props) => {
+  const location = useLocation();
   // ***********************************************************
   // CommerceJS is handling backend
 
@@ -37,7 +38,7 @@ const App = () => {
   return (
     <div>
       <Announcement />
-      <Header count={localStorage.length} />
+      <Header count={location.state} />
       <Featured />
       <div className="app">{mappedData}</div>
       <Footer />
