@@ -266,7 +266,7 @@ img {
 }
 .flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 #flex-right {
   display: flex;
@@ -372,7 +372,7 @@ footer {
     align-content: stretch;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-evenly;
   }
 }
 
