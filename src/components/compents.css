@@ -363,3 +363,17 @@ footer {
   text-align: -webkit-center;
   justify-content: center;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+  .flex {
+    display: flex;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+/* End of Media Queries */
