@@ -126,13 +126,7 @@ const SingleProductScreen = () => {
                   >
                     <span id="plus"></span> ADD TO CART
                   </button>
-                  <button
-                    id="productScreenBtn"
-                    type="button"
-                    className="btn btn-primary"
-                  >
-                    <span id="plus"></span> BUY NOW
-                  </button>
+
                   <Link to="/" state={localStorage.length - 1}>
                     <button
                       id="productScreenBtn"
