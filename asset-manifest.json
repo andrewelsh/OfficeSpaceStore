@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/OfficeSpace2/static/css/main.07ebc163.css",
+    "main.css": "/OfficeSpace2/static/css/main.44db0736.css",
     "main.js": "/OfficeSpace2/static/js/main.2d76b06f.js",
     "index.html": "/OfficeSpace2/index.html",
-    "main.07ebc163.css.map": "/OfficeSpace2/static/css/main.07ebc163.css.map",
+    "main.44db0736.css.map": "/OfficeSpace2/static/css/main.44db0736.css.map",
     "main.2d76b06f.js.map": "/OfficeSpace2/static/js/main.2d76b06f.js.map"
   },
   "entrypoints": [
-    "static/css/main.07ebc163.css",
+    "static/css/main.44db0736.css",
     "static/js/main.2d76b06f.js"
   ]
 }
